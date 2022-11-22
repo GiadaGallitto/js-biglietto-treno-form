@@ -39,5 +39,11 @@ button.addEventListener("click", function() {
     let ticketPrice = (priceForKm * inputUserKm.value);
     console.log("Il prezzo del biglietto base è di: " + ticketPrice.toFixed(2) + " €");
 
-    console.log(inputUserAge.value)
+    console.log( parseInt(inputUserAge.value) );
+    
+    if(parseInt (inputUserAge.value < 18)){
+        const underAgeDiscount = 17.5 * ticketPrice / 100;
+        let ticketPrice = ticketPrice - underAgeDiscount;
+        console.log(underAgeDiscount.value)
+    }
 })
