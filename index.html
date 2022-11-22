@@ -26,57 +26,62 @@
     </header>
 
     <main>
-        <div class="row-cols-1 mt-5">
-            <div class="col text-center">
-                <h2>Ad ogni Strega e Mago <br>
-                Benvenuti nel sito dell'Hogwarts Express! </h2>
-            </div>
-            <div class="col text-center">
-                <h4>Siete pronti a viaggiare per un viaggio magico sul nostro treno?</h4>
-                <p>Inserite i vostri dati qui sotto per scoprire il prezzo del vostro personale biglietto:</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-8 m-auto">
-                <div class="row justify-content-center">
-                    <div class="col-4 py-3 text-center">
-                        <label class="d-block" for="userName">Come ti chiami?</label>
-                        <input type="text" name="name" id="userName" placeholder="Inserisci Nome e Cognome">
-                    </div>
-                    <div class="col-4 py-3 text-center">
-                        <label class="d-block" for="userKm">Quanti km vuoi percorrere?</label>
-                        <input type="number" name="km" id="userKm" placeholder="Inserisci i Km desiderati">
+        <div class="container py-3 mt-5">
+            <div class="row-cols-1">
+                <div class="col text-center">
+                    <h2>Ad ogni Strega e Mago <br>
+                    Benvenuti nel sito dell'Hogwarts Express! </h2>
+                    <div class="image m-auto mb-3">
+                        <img class="w-100" src="./img/PinClipart.com_hogwarts-express-clip-art_4603494.png" alt="9 3/4 logo">
                     </div>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="col-4 py-3 text-center">
-                        <label class="d-block" for="userAge">Qual è la tua età?</label>
-                        <input type="number" name="age" id="userAge" placeholder="Inserisci la tua età">
-                    </div>
-                    <div class="col-4 py-3 text-center">
-                        <label class="d-block" for="userHouse">Di che casa sei?</label>
-                        <select class="px-5" name="house" id="userHouse">
-                            <option value="1">Grifondoro</option>
-                            <option value="2">Corvonero</option>
-                            <option value="3">Tassorosso</option>
-                            <option value="4">Serpeverde</option>
-                        </select>
-                    </div>
+                <div class="col text-center">
+                    <h4>Siete pronti a viaggiare per un viaggio magico sul nostro treno?</h4>
+                    <p class="fs-5">Inserite i vostri dati qui sotto per scoprire il prezzo del vostro personale biglietto:</p>
                 </div>
-
-                <div class="row">
-                    <div class="col-12 py-3 text-center">
-                        <label for="verify">La domanda più importante... Sei un babbano?</label>
-                        <select name="verify" id="verify">
-                            <option value="yes">Si</option>
-                            <option value="no">No</option>
-                        </select>
+            </div>
+            <div class="row">
+                <div class="col-8 m-auto">
+                    <div class="row justify-content-center">
+                        <div class="col-4 py-3 text-center">
+                            <label class="d-block" for="userName">Come ti chiami?</label>
+                            <input type="text" name="name" id="userName" placeholder="Inserisci Nome e Cognome">
+                        </div>
+                        <div class="col-4 py-3 text-center">
+                            <label class="d-block" for="userKm">Quanti km vuoi percorrere?</label>
+                            <input type="number" name="km" id="userKm" placeholder="Inserisci i Km desiderati">
+                        </div>
                     </div>
-                    <div class="buttons col-12 text-center">
-                        <button class="btn btn-dark">Clicca qui!</button>
+                    <div class="row justify-content-center">
+                        <div class="col-4 py-3 text-center">
+                            <label class="d-block" for="userAge">Qual è la tua età?</label>
+                            <input type="number" name="age" id="userAge" placeholder="Inserisci la tua età">
+                        </div>
+                        <div class="col-4 py-3 text-center">
+                            <label class="d-block" for="userHouse">Di che casa sei?</label>
+                            <select class="px-5" name="house" id="userHouse">
+                                <option value="1">Grifondoro</option>
+                                <option value="2">Corvonero</option>
+                                <option value="3">Tassorosso</option>
+                                <option value="4">Serpeverde</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="col-12 mt-4 text-center">
-                        <p id="output"></p>
+    
+                    <div class="row">
+                        <div class="col-12 py-3 text-center">
+                            <label for="verify">La domanda più importante... Sei un babbano?</label>
+                            <select name="verify" id="verify">
+                                <option value="yes">Si</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                        <div class="buttons col-12 text-center">
+                            <button class="btn btn-dark">Clicca qui!</button>
+                        </div>
+                        <div class="col-12 mt-4 text-center">
+                            <p class="fs-3" id="output"></p>
+                        </div>
                     </div>
                 </div>
             </div>
