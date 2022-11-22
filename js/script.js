@@ -28,7 +28,16 @@ console.log("Il prezzo base al Km è di: " + priceForKm + " €" );
 
 const inputUserKm = document.querySelector("input#userKm");
 
+const inputUserAge = document.querySelector("input#userAge")
+
 const output = document.getElementById("output");
 
 const button = document.querySelector("div.buttons a.btn");
 
+button.addEventListener("click", function() {
+    console.log( parseInt(inputUserKm.value) );
+    let ticketPrice = (priceForKm * inputUserKm.value);
+    console.log("Il prezzo del biglietto base è di: " + ticketPrice.toFixed(2) + " €");
+
+    console.log(inputUserAge.value)
+})
