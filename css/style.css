@@ -1,0 +1,14 @@
+body{
+    background-image: url(../img/17032442.jpg);
+    background-position: center;
+    font-family: 'Benne', serif;
+    font-weight: 600;
+}
+
+header{
+    background-color: #520f20;
+}
+
+header h1{
+    font-size: 3.5rem;
+}

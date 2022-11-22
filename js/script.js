@@ -3,9 +3,13 @@ const priceForKm = 0.2762;
 
 console.log("Il prezzo base al Km è di: " + priceForKm + " €" );
 
-const inputUserKm = document.querySelector("input#userKm");
+const inputUserKm = document.getElementById("userKm");
 
-const inputUserAge = document.querySelector("input#userAge")
+const inputUserAge = document.getElementById("userAge");
+
+const inputUserName = document.getElementById("userName");
+
+const userHouse = document.getElementById("userHouse");
 
 const output = document.getElementById("output");
 
@@ -19,6 +23,8 @@ button.addEventListener("click", function() {
     console.log("Il prezzo del biglietto base è di: " + ticketPrice.toFixed(2) + " €");
 
     console.log( parseInt(inputUserAge.value) );
+
+    console.log(inputUserName.value);
     
     if(parseInt(inputUserAge.value) < 18){
         const underAgeDiscount = 17.5 * ticketPrice / 100;
@@ -30,5 +36,5 @@ button.addEventListener("click", function() {
         console.log("Il prezzo del biglietto scontato è di: " + ticketPrice.toFixed(2) + " €")
     }
 
-    document.getElementById("output").innerHTML = `Il prezzo totale del suo biglietto è di: ${ticketPrice.toFixed(2)} &euro;`;
+    document.getElementById("output").innerHTML = `Ciao ${inputUserName.value} ! Il prezzo del tuo biglietto è di: ${ticketPrice.toFixed(2)} galeoni`;
 })

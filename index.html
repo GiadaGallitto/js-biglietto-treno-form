@@ -6,31 +6,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Benne&display=swap" rel="stylesheet">
+
     <title>Biglietto Treno</title>
 </head>
 
 <body>
     
     <header>
-        <h1>Benvenuto gentile utente</h1>
+        <div class="row h-100 pb-3 pt-4">
+            <div class="col-12 text-white text-center">
+                <h1>Hogwarts Express</h1>
+            </div>
+        </div>
     </header>
 
     <main>
-        <h2>Prego, compila e inserisci le informazioni necessarie per il calcolo del tuo biglietto</h2>
-        <div>
-            <label for="userKm">Quanti km vuoi percorrere?</label>
-            <input type="number" name="km" id="userKm">
-
-            <label for="userAge">Qual è la tua età?</label>
-            <input type="number" name="age" id="userAge">
-
-            <div class="buttons">
-                <button class="btn btn-primary">Clicca qui!</button>
+        <div class="row-cols-1 mt-5">
+            <div class="col text-center">
+                <h2>Ad ogni Strega e Mago <br>
+                Benvenuti nel sito dell'Hogwarts Express! </h2>
+            </div>
+            <div class="col text-center">
+                <h4>Siete pronti a viaggiare per un viaggio magico sul nostro treno?</h4>
+                <p>Inserite i vostri dati qui sotto per scoprire il prezzo del vostro personale biglietto:</p>
             </div>
         </div>
+        <div class="row">
+            <div class="col-8 m-auto">
+                <div class="row justify-content-center">
+                    <div class="col-4 py-3 text-center">
+                        <label class="d-block" for="userName">Come ti chiami?</label>
+                        <input type="text" name="name" id="userName" placeholder="Inserisci Nome e Cognome">
+                    </div>
+                    <div class="col-4 py-3 text-center">
+                        <label class="d-block" for="userKm">Quanti km vuoi percorrere?</label>
+                        <input type="number" name="km" id="userKm" placeholder="Inserisci i Km desiderati">
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-4 py-3 text-center">
+                        <label class="d-block" for="userAge">Qual è la tua età?</label>
+                        <input type="number" name="age" id="userAge" placeholder="Inserisci la tua età">
+                    </div>
+                    <div class="col-4 py-3 text-center">
+                        <label class="d-block" for="userHouse">Di che casa sei?</label>
+                        <select class="px-5" name="house" id="userHouse">
+                            <option value="1">Grifondoro</option>
+                            <option value="2">Corvonero</option>
+                            <option value="3">Tassorosso</option>
+                            <option value="4">Serpeverde</option>
+                        </select>
+                    </div>
+                </div>
 
-        <div>
-            <p id="output"></p>
+                <div class="row">
+                    <div class="col-12 py-3 text-center">
+                        <label for="verify">La domanda più importante... Sei un babbano?</label>
+                        <select name="verify" id="verify">
+                            <option value="yes">Si</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    <div class="buttons col-12 text-center">
+                        <button class="btn btn-dark">Clicca qui!</button>
+                    </div>
+                    <div class="col-12 mt-4 text-center">
+                        <p id="output"></p>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
