@@ -47,5 +47,9 @@ button.addEventListener("click", function() {
         const underAgeDiscount = 17.5 * ticketPrice / 100;
         ticketPrice = ticketPrice - underAgeDiscount;
         console.log("Il prezzo del biglietto scontato è di: " + ticketPrice.toFixed(2) + " €")
+    } else if(parseInt(inputUserAge.value) >= 65) {
+        const overAgeDiscount = 33.3 * ticketPrice / 100;
+        ticketPrice = ticketPrice - overAgeDiscount;
+        console.log("Il prezzo del biglietto scontato è di: " + ticketPrice.toFixed(2) + " €")
     }
 })
