@@ -32,18 +32,20 @@ const inputUserAge = document.querySelector("input#userAge")
 
 const output = document.getElementById("output");
 
-const button = document.querySelector("div.buttons a.btn");
+const button = document.querySelector("div.buttons .btn");
+
+let ticketPrice;
 
 button.addEventListener("click", function() {
     console.log( parseInt(inputUserKm.value) );
-    let ticketPrice = (priceForKm * inputUserKm.value);
+    ticketPrice = (priceForKm * inputUserKm.value);
     console.log("Il prezzo del biglietto base è di: " + ticketPrice.toFixed(2) + " €");
 
     console.log( parseInt(inputUserAge.value) );
     
-    if(parseInt (inputUserAge.value < 18)){
+    if(parseInt(inputUserAge.value) < 18){
         const underAgeDiscount = 17.5 * ticketPrice / 100;
-        let ticketPrice = ticketPrice - underAgeDiscount;
-        console.log(underAgeDiscount.value)
+        ticketPrice = ticketPrice - underAgeDiscount;
+        console.log("Il prezzo del biglietto scontato è di: " + ticketPrice.toFixed(2) + " €")
     }
 })
