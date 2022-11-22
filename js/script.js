@@ -1,27 +1,4 @@
 
-// SCHEMA ESERCIZIO
-
-// MileStone 1 (Creazione richieste base e calcoli):
-
-// -Chiedo (Senza prompt) il numero di chilometri da percorrere:
-
-//     Creo un imput type number per inserire il numero desiderato dall'utente;
-//         -Definisco il prezzo base di 0.2762 euro al km
-//         -Calcolo il prezzo base del biglietto, moltiplicando il prezzo di 0.2762 euro per i km inseriti
-
-// -Chiedo (Senza prompt) l'età del passeggero:
-
-//     Creo un input type number per inserire il numero di anni dell'utente;
-//         -Applico un possibile sconto in base all'età del passeggero:
-//             -Se il passeggero ha meno di 18 anni, allora verrà applicato uno sconto del 17.5% sul prezzo base del biglietto
-//                 Altrimenti non verrà applicato lo sconto
-            
-//             -Se il passeggero ha un'età >= di 65 anni, allora verrà applicato uno sconto del 33.3% sul prezzo base del biglietto
-//                 Altrimenti non verrà applicato lo sconto
-
-// -Creo un button da cliccare per ottenere il risultato del prezzo totale:
-
-
 const priceForKm = 0.2762;
 
 console.log("Il prezzo base al Km è di: " + priceForKm + " €" );
@@ -52,4 +29,6 @@ button.addEventListener("click", function() {
         ticketPrice = ticketPrice - overAgeDiscount;
         console.log("Il prezzo del biglietto scontato è di: " + ticketPrice.toFixed(2) + " €")
     }
+
+    document.getElementById("output").innerHTML = `Il prezzo totale del suo biglietto è di: ${ticketPrice.toFixed(2)} &euro;`;
 })
